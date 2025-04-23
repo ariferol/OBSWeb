@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Öğrenci Bilgi Sistemi - Giriş</title>
+</h:head>
+<h:body style="background-color:#f4f4f4">
+    <h:form>
+        <p:panel header="Giriş Yap" style="width:300px;margin:100px auto;">
+            <p:messages id="messages" />
+            <p:inputText value="#{loginBean.username}" placeholder="Kullanıcı Adı" required="true"/>
+            <p:password value="#{loginBean.password}" placeholder="Şifre" required="true"/>
+            <p:commandButton type="submit" value="Giriş" action="#{loginBean.login}" update="messages" style="margin-top:10px" />
+        </p:panel>
+    </h:form>
+</h:body>
+</html>

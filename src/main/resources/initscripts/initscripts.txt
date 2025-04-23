@@ -1,0 +1,51 @@
+Scriptler:
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    role VARCHAR(20) NOT NULL
+);
+
+INSERT INTO users (username, password, role) VALUES
+('admin', 'admin123', 'ADMIN'),
+('student1', 'student123', 'STUDENT'),
+('student2', 'student123', 'STUDENT'),
+('student3', 'student123', 'STUDENT'),
+('student4', 'student123', 'STUDENT'),
+('student5', 'student123', 'STUDENT');
+
+
+CREATE TABLE student_grades (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT NOT NULL,
+    student_name VARCHAR(100) NOT NULL,
+    grade DECIMAL(5,2) NOT NULL,
+    semester VARCHAR(20) NOT NULL
+);
+
+INSERT INTO student_grades (student_id, student_name, grade, semester)
+VALUES 
+(1001, 'Ali Yilmaz', 88.5, '2025-2026'),
+(1002, 'Ayse Demir', 75.0, '2025-2026'),
+(1003, 'Mehmet Kaya', 92.0, '2025-2026'),
+(1004, 'Elif Can', 67.5, '2025-2026');
+
+
+
+CREATE TABLE student (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    surname VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL
+);
+
+INSERT INTO student (name, surname, email) VALUES
+('Ali', 'Yilmaz', 'ali.yilmaz@example.com'),
+('Ayse', 'Demir', 'ayse.demir@example.com'),
+('Mehmet', 'Kaya', 'mehmet.kaya@example.com'),
+('Zeynep', 'Celik', 'zeynep.celik@example.com'),
+('Can', 'Aydin', 'can.aydin@example.com');
+
+
+

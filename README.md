@@ -79,3 +79,8 @@ OBSWeb/
 4. Deploy to GlassFish Server and Run Netbeans IDE
 
 5. Visit: http://localhost:8080/obs/
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).  
+You are free to use, modify, and distribute this project with proper attribution.

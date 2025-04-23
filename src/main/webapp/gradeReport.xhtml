@@ -1,0 +1,20 @@
+<ui:composition template="/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:define name="content">
+        <h2>Dönem Not Raporu</h2>
+
+        <h:form id="reportForm">
+            <p:panel header="Not Raporu">
+                <p:panel header="Dönem Not Raporu" toggleable="true">
+                    <p:commandButton value="PDF Raporu Görüntüle"
+                     type="button"
+                     onclick="window.open('/obs/pdfReport', '_blank');" />
+                </p:panel>
+            </p:panel>  
+        </h:form>
+    </ui:define>
+</ui:composition>

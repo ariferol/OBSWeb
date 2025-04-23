@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 23, 2025, 8:07:33 AM
+    Author     : arif.erol
+*/
+
+/* responsive-table.css */
+
+@media screen and (max-width: 768px) {
+    .responsive-table table,
+    .responsive-table thead,
+    .responsive-table tbody,
+    .responsive-table th,
+    .responsive-table td,
+    .responsive-table tr {
+        display: block;
+    }
+
+    .responsive-table thead tr {
+        display: none;
+    }
+
+    .responsive-table td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .responsive-table td:before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    /* Her sütun için başlık metinlerini belirtin */
+    .responsive-table td:nth-of-type(1):before { content: "ID"; }
+    .responsive-table td:nth-of-type(2):before { content: "Ad"; }
+    .responsive-table td:nth-of-type(3):before { content: "Soyad"; }
+    .responsive-table td:nth-of-type(4):before { content: "E-posta"; }
+}

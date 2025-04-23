@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    
+    <lifecycle>
+        <phase-listener>com.obs.web.listener.OtherAuthListener</phase-listener>
+    </lifecycle>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+      <navigation-case>
+            <from-outcome>logout_denunciation</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+<!--Koruma altina alinacak; GET sayfalari listesi-->
+    <protected-views>
+<!--    <url-pattern>/content/protected/test.xhtml</url-pattern>        -->
+    </protected-views>     
+
+</faces-config>
