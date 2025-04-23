@@ -30,7 +30,7 @@ This is a web-based Student Information System built using Java EE 7, JSF with P
 - **Database**: MySQL, initialized via Docker Compose with sample data.
 
 ## 📂 Project Structure
-
+```
 OBSWeb/
 ├── .gitignore
 ├── pom.xml
@@ -66,6 +66,7 @@ OBSWeb/
 │           ├── studentForm.xhtml
 │           ├── studentSearch.xhtml
 │           └── gradeReport.xhtml
+```
 
 ## 🚀 How to Run
 
